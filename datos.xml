@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<empresas>
+  <empresa>
+    <nombre>Botiga Amposta</nombre>
+    <telefono>977703838</telefono>
+    <correo>contacte@botigaamposta.com</correo>
+    <direccion>Carrer del Mar, 12, Amposta</direccion>
+    <pregunta1>Compleix la regulació en matèria laboral</pregunta1>
+    <pregunta2>Compleix la regulació en matèria de diversitat</pregunta2>
+    <pregunta3>Compleix la regulació en matèria de formació</pregunta3>
+    <pregunta4>Sí</pregunta4>
+    <pregunta5>Sí</pregunta5>
+    <pregunta6>No</pregunta6>
+    <pregunta7>No</pregunta7>
+    <pregunta8>No aplica / No compleix</pregunta8>
+    <pregunta9>No aplica / No compleix</pregunta9>
+    <pregunta10>Sí</pregunta10>
+    <pregunta11>Sí</pregunta11>
+    <pregunta12>Sí</pregunta12>
+    <pregunta13>Sí</pregunta13>
+    <nom>Botiga Amposta</nom>
+    <cp>43870</cp>
+    <sector>Comerç al detall</sector>
+    <empleats>8</empleats>
+  </empresa>
+  <empresa>
+    <nombre>Serveis Industrials Delta</nombre>
+    <telefono>977801234</telefono>
+    <correo>info@serveisindustrialsdelta.com</correo>
+    <direccion>Carrer de la Industria, 25, Amposta</direccion>
+    <pregunta1>Compleix la regulació en matèria laboral</pregunta1>
+    <pregunta2>Compleix la regulació en matèria de diversitat</pregunta2>
+    <pregunta3>Compleix la regulació en matèria de formació</pregunta3>
+    <pregunta4>No</pregunta4>
+    <pregunta5>Sí</pregunta5>
+    <pregunta6>No</pregunta6>
+    <pregunta7>Sí</pregunta7>
+    <pregunta8>Sí</pregunta8>
+    <pregunta9>No aplica / No compleix</pregunta9>
+    <pregunta10>No</pregunta10>
+    <pregunta11>No</pregunta11>
+    <pregunta12>No</pregunta12>
+    <pregunta13>Sí</pregunta13>
+    <nom>Serveis Industrials Delta</nom>
+    <cp>43870</cp>
+    <sector>Indústria i fabricació</sector>
+    <empleats>25</empleats>
+  </empresa>
+  <empresa>
+    <nombre>Consultoria DeltaTech</nombre>
+    <telefono>977951234</telefono>
+    <correo>contacte@deltatech.com</correo>
+    <direccion>Avinguda de Catalunya, 54, Amposta</direccion>
+    <pregunta1>Compleix la regulació en matèria laboral</pregunta1>
+    <pregunta2>Compleix la regulació en matèria de diversitat</pregunta2>
+    <pregunta3>Compleix la regulació en matèria de formació</pregunta3>
+    <pregunta4>Sí</pregunta4>
+    <pregunta5>Sí</pregunta5>
+    <pregunta6>Sí</pregunta6>
+    <pregunta7>No</pregunta7>
+    <pregunta8>No aplica / No compleix</pregunta8>
+    <pregunta9>Sí</pregunta9>
+    <pregunta10>No</pregunta10>
+    <pregunta11>Sí</pregunta11>
+    <pregunta12>No</pregunta12>
+    <pregunta13>No</pregunta13>
+    <nom>Consultoria DeltaTech</nom>
+    <cp>43870</cp>
+    <sector>Consultoria tecnològica</sector>
+    <empleats>15</empleats>
+  </empresa>
+</empresas>

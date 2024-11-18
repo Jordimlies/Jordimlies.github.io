@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llistat d'Empreses Guardades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+    <div class="menu">
+        <div class="logo">Montsià30</div>
+        <div class="principal">
+            <!-- Botó "Índex" que redirigeix a index.html -->
+            <button onclick="window.location.href='index.html'" class="menu-button">Índex</button>
+            <button class="menu-button">IA</button>
+        </div>
+        <div class="search">
+            <a href="javascript:void(0);" onclick="toggleCercador()">
+                <img src="images/search.png" class="small-icon" alt="Cercar">
+            </a>
+            <!-- Formulari de cerca que apareixerà a l'esquerra de la lupa -->
+            <input type="text" id="buscador" class="cercador-input" placeholder="Cerca empresa...">
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Llistat d'Empreses Guardades</h1>
+        
+        <!-- Aquí és on es mostrarà el contingut del XML -->
+        <pre id="xml-content"></pre>
+    </div>
+
+    <script>
+        // Funció per carregar i mostrar el contingut del fitxer XML estructurat
+        async function loadXMLContent() {
+            try {
+                const response = await fetch('datos.xml');
+                const xmlText = await response.text();
+                
+                // Convertir el text XML a un objecte XML DOM
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+                // Convertir l'objecte XML DOM a una cadena de text amb format
+                const serializer = new XMLSerializer();
+                const formattedXML = serializer.serializeToString(xmlDoc);
+
+                // Inserir el text del XML estructurat a la pàgina
+                document.getElementById('xml-content').textContent = formattedXML;
+            } catch (error) {
+                console.error('Error carregant el fitxer XML:', error);
+                document.getElementById('xml-content').textContent = "Error en carregar el fitxer XML.";
+            }
+        }
+
+        // Carregar el contingut XML quan es carrega la pàgina
+        document.addEventListener("DOMContentLoaded", loadXMLContent);
+    </script>
+</body>
+</html>

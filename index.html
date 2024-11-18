@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qüestionari en XML sense guardar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+    <div class="menu">
+        <div class="logo">Montsià30</div>
+        <div class="principal">
+            <!-- Botó "Índex" que redirigeix a index.html -->
+            <button onclick="window.location.href='index.html'" class="menu-button">Índex</button>
+            <button onclick="window.location.href='index_xml_view.html'" class="menu-button">Vore XML archiu</button>
+            <button class="menu-button">IA</button>
+        </div>
+        <div class="search">
+            <a href="javascript:void(0);" onclick="toggleCercador()">
+                <img src="images/search.png" class="small-icon" alt="Cercar">
+            </a>
+            <!-- Formulari de cerca que apareixerà a l'esquerra de la lupa -->
+            <input type="text" id="buscador" class="cercador-input" placeholder="Cerca empresa...">        </div>
+    </div>
+
+    <div class="container">
+        <h1>Qüestionari en XML sense guardar</h1>
+        <form id="questionnaireForm">
+            <!-- Dades bàsiques de l'empresa -->
+            <div class="section">
+                <h2>Dades de l'empresa</h2>
+                <label for="empresa">Nom de l'empresa:</label>
+                <input type="text" id="empresa" name="empresa" required>
+                <label for="telefon">Telèfon de contacte:</label>
+                <input type="text" id="telefon" name="telefon" required>
+                <label for="email">Correu electrònic:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="direccio">Adreça física:</label>
+                <input type="text" id="direccio" name="direccio" required>
+            </div>
+
+            <hr> <!-- Separació visual -->
+
+            <!-- Dades personals -->
+            <div class="section">
+                <h2>Dades personals</h2>
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="cp">Codi postal:</label>
+                <input type="text" id="cp" name="cp" required>
+                <label for="sector">Sector:</label>
+                <input type="text" id="sector" name="sector" required>
+                <label for="empleats">Número d'empleats:</label>
+                <input type="number" id="empleats" name="empleats" required>
+            </div>
+
+            <hr> <!-- Separació visual -->
+
+            <!-- Preguntes del qüestionari -->
+            <div class="section">
+                <h2>Qüestionari de Sostenibilitat</h2>
+
+                <!-- Pregunta 1 -->
+                <div class="question">
+                    <p>1. Com afronta la seva empresa els assumptes relacionats amb la gestió de les condicions laborals?</p>
+                    <label><input type="radio" name="q1" value="No aplica / No compleix" required> No aplica / No compleix</label>
+                    <label><input type="radio" name="q1" value="Compleix la regulació en matèria laboral"> Compleix la regulació en matèria laboral</label>
+                    <label><input type="radio" name="q1" value="Estableix plans i objectius per millorar"> Estableix plans i objectius per millorar</label>
+                    <label><input type="radio" name="q1" value="Forma part de l'estratègia de l'empresa"> Forma part de l'estratègia de l'empresa</label>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="question">
+                    <p>2. Com gestiona la seva organització els aspectes relacionats amb la diversitat i el benestar emocional?</p>
+                    <label><input type="radio" name="q2" value="No aplica / No compleix" required> No aplica / No compleix</label>
+                    <label><input type="radio" name="q2" value="Compleix la regulació en matèria de diversitat"> Compleix la regulació en matèria de diversitat</label>
+                    <label><input type="radio" name="q2" value="Estableix pràctiques i objectius per millorar"> Estableix pràctiques i objectius per millorar</label>
+                    <label><input type="radio" name="q2" value="Forma part de l'estratègia de l'empresa"> Forma part de l'estratègia de l'empresa</label>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="question">
+                    <p>3. Com gestiona la seva organització els aspectes relacionats amb el desenvolupament professional?</p>
+                    <label><input type="radio" name="q3" value="No aplica / No compleix" required> No aplica / No compleix</label>
+                    <label><input type="radio" name="q3" value="Compleix la regulació en matèria de formació"> Compleix la regulació en matèria de formació</label>
+                    <label><input type="radio" name="q3" value="Estableix plans i objectius per millorar"> Estableix plans i objectius per millorar</label>
+                    <label><input type="radio" name="q3" value="Forma part de l'estratègia de l'empresa"> Forma part de l'estratègia de l'empresa</label>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="question">
+                    <p>4. Té el seu negoci un sistema de gestió de la diversitat?</p>
+                    <label><input type="radio" name="q4" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q4" value="No"> No</label>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="question">
+                    <p>5. La seva organització promou activament la integració de la diversitat de gènere, ètnica, cultural, etc.?</p>
+                    <label><input type="radio" name="q5" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q5" value="No"> No</label>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="question">
+                    <p>6. El seu negoci implementa pràctiques de responsabilitat social corporativa (RSC)?</p>
+                    <label><input type="radio" name="q6" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q6" value="No"> No</label>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="question">
+                    <p>7. La seva empresa realitza activitats per millorar la qualitat de vida laboral dels seus treballadors?</p>
+                    <label><input type="radio" name="q7" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q7" value="No"> No</label>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="question">
+                    <p>8. Com avaluaria la seva empresa la seva contribució als objectius de desenvolupament sostenible (ODS)?</p>
+                    <label><input type="radio" name="q8" value="No aplica / No compleix" required> No aplica / No compleix</label>
+                    <label><input type="radio" name="q8" value="Compleix parcialment els ODS"> Compleix parcialment els ODS</label>
+                    <label><input type="radio" name="q8" value="Estableix accions per contribuir als ODS"> Estableix accions per contribuir als ODS</label>
+                    <label><input type="radio" name="q8" value="Forma part de l'estratègia empresarial i l'operativa diària"> Forma part de l'estratègia empresarial i l'operativa diària</label>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="question">
+                    <p>9. Com gestiona la seva empresa les seves pràctiques mediambientals?</p>
+                    <label><input type="radio" name="q9" value="No aplica / No compleix" required> No aplica / No compleix</label>
+                    <label><input type="radio" name="q9" value="Compliment amb la regulació ambiental"> Compliment amb la regulació ambiental</label>
+                    <label><input type="radio" name="q9" value="Accions voluntàries per reduir l'impacte ambiental"> Accions voluntàries per reduir l'impacte ambiental</label>
+                    <label><input type="radio" name="q9" value="Forma part de l'estratègia empresarial i l'operativa diària"> Forma part de l'estratègia empresarial i l'operativa diària</label>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="question">
+                    <p>10. La seva empresa fomenta el consum responsable i la protecció del medi ambient?</p>
+                    <label><input type="radio" name="q10" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q10" value="No"> No</label>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div class="question">
+                    <p>11. La seva empresa disposa d'alguna certificació ambiental o social?</p>
+                    <label><input type="radio" name="q11" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q11" value="No"> No</label>
+                </div>
+
+                <!-- Pregunta 12 -->
+                <div class="question">
+                    <p>12. Tindria la seva empresa interès en implementar algun sistema de gestió per millorar la seva responsabilitat social?</p>
+                    <label><input type="radio" name="q12" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q12" value="No"> No</label>
+                </div>
+
+                <!-- Pregunta 13 -->
+                <div class="question">
+                    <p>13. Té la seva empresa alguna estratègia per reduir el consum de recursos?</p>
+                    <label><input type="radio" name="q13" value="Sí" required> Sí</label>
+                    <label><input type="radio" name="q13" value="No"> No</label>
+                </div>
+                
+                <!-- Addicionalment, pots afegir més preguntes aquí -->
+                
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+        <div id="formOutput" style="display:none;">
+            <h2>Dades en format XML</h2>
+            <pre id="outputContent"></pre>
+        </div>
+    </div>
+
+    <script>
+        // Funció per capturar el formulari i mostrar-lo a la mateixa pàgina en format XML
+        document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que el formulari es enviï a un servidor
+    
+            const formData = new FormData(this);
+    
+            // Generar l'estructura XML personalitzada
+            let xmlOutput = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n`;
+            xmlOutput += `<empresas>\n`;
+            xmlOutput += `  <empresa>\n`;
+            xmlOutput += `    <nombre>${formData.get('empresa')}</nombre>\n`;
+            xmlOutput += `    <telefono>${formData.get('telefon')}</telefono>\n`;
+            xmlOutput += `    <correo>${formData.get('email')}</correo>\n`;
+            xmlOutput += `    <direccion>${formData.get('direccio')}</direccion>\n`;
+    
+            // Afegir totes les preguntes i respostes (13 preguntes)
+            xmlOutput += `    <pregunta1>${formData.get('q1')}</pregunta1>\n`;
+            xmlOutput += `    <pregunta2>${formData.get('q2')}</pregunta2>\n`;
+            xmlOutput += `    <pregunta3>${formData.get('q3')}</pregunta3>\n`;
+            xmlOutput += `    <pregunta4>${formData.get('q4')}</pregunta4>\n`;
+            xmlOutput += `    <pregunta5>${formData.get('q5')}</pregunta5>\n`;
+            xmlOutput += `    <pregunta6>${formData.get('q6')}</pregunta6>\n`;
+            xmlOutput += `    <pregunta7>${formData.get('q7')}</pregunta7>\n`;
+            xmlOutput += `    <pregunta8>${formData.get('q8')}</pregunta8>\n`;
+            xmlOutput += `    <pregunta9>${formData.get('q9')}</pregunta9>\n`;
+            xmlOutput += `    <pregunta10>${formData.get('q10')}</pregunta10>\n`;
+            xmlOutput += `    <pregunta11>${formData.get('q11')}</pregunta11>\n`;
+            xmlOutput += `    <pregunta12>${formData.get('q12')}</pregunta12>\n`;
+            xmlOutput += `    <pregunta13>${formData.get('q13')}</pregunta13>\n`;
+    
+            // Dades personals
+            xmlOutput += `    <nom>${formData.get('nom')}</nom>\n`;
+            xmlOutput += `    <cp>${formData.get('cp')}</cp>\n`;
+            xmlOutput += `    <sector>${formData.get('sector')}</sector>\n`;
+            xmlOutput += `    <empleats>${formData.get('empleats')}</empleats>\n`;
+    
+            xmlOutput += `  </empresa>\n`;
+            xmlOutput += `</empresas>\n`;
+    
+            // Mostra el resultat a la pàgina en format XML
+            document.getElementById('outputContent').textContent = xmlOutput;
+            document.getElementById('formOutput').style.display = 'block';
+            document.getElementById('questionnaireForm').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
